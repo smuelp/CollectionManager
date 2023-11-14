@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #242836;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistroController">
+   <children>
+      <AnchorPane layoutX="159.0" layoutY="22.0" prefHeight="550.0" prefWidth="312.0" style="-fx-background-color: linear-gradient(to right, #373b52, #252736 51%, #1d1e26);" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="164.0" AnchorPane.topAnchor="22.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label alignment="CENTER" layoutX="40.0" layoutY="26.0" prefHeight="38.0" prefWidth="218.0" text="REGISTRE-SE" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font name="Tahoma Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCancelar" alignment="CENTER" layoutX="214.0" layoutY="499.0" mnemonicParsing="false" onAction="#irParaLogin" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #E1332D; -fx-background-radius: 2px; -fx-border-color: transparent; -fx-border-radius: 2px;" text="CANCELAR" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnRegistrar" alignment="CENTER" layoutX="87.0" layoutY="436.0" mnemonicParsing="false" onAction="#registrarConta" prefHeight="41.0" prefWidth="158.0" style="-fx-background-color: #275efe; -fx-background-radius: 2px; -fx-border-color: transparent; -fx-border-radius: 2px;" text="REGISTRAR" textFill="WHITE" AnchorPane.bottomAnchor="107.0" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="436.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtNome" layoutX="14.0" layoutY="143.0" prefHeight="25.0" prefWidth="280.0" promptText="seu nome" style="-fx-background-color: #7881a1; -fx-font-family: sans-serif; -fx-border-style: none; -fx-border-color: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6); -fx-border-width: 0px  0px  1px  0px;" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="143.0" />
+            <TextField fx:id="txtEmail" layoutX="14.0" layoutY="199.0" prefHeight="25.0" prefWidth="280.0" promptText="seu e-mail" style="-fx-background-color: #7881a1; -fx-font-family: sans-serif; -fx-border-style: none; -fx-border-color: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6); -fx-border-width: 0px  0px  1px  0px;" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="199.0" />
+            <PasswordField fx:id="txtSenha" layoutX="14.0" layoutY="254.0" prefHeight="25.0" prefWidth="280.0" promptText="crie uma senha" style="-fx-background-color: #7881a1; -fx-font-family: sans-serif; -fx-border-style: none; -fx-border-color: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6); -fx-border-width: 0px  0px  1px  0px;" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="254.0" />
+            <CheckBox fx:id="ckbView" layoutX="300.0" layoutY="258.0" mnemonicParsing="false" onAction="#verSenha" AnchorPane.leftAnchor="290.0" AnchorPane.topAnchor="258.0" />
+            <CheckBox fx:id="ckbView1" layoutX="300.0" layoutY="323.0" mnemonicParsing="false" onAction="#verConfirmeSenha" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="6.0" />
+            <PasswordField fx:id="txtSenha1" layoutX="14.0" layoutY="319.0" prefHeight="25.0" prefWidth="280.0" promptText="repita a senha" style="-fx-background-color: #7881a1; -fx-font-family: sans-serif; -fx-border-style: none; -fx-border-color: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6); -fx-border-width: 0px  0px  1px  0px;" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="319.0" />
+            <Label layoutX="14.0" layoutY="128.0" text="Nome:" textFill="WHITE" AnchorPane.leftAnchor="7.0">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="184.0" text="E-mail:" textFill="WHITE" AnchorPane.leftAnchor="7.0">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="239.0" text="Senha:" textFill="WHITE" AnchorPane.leftAnchor="7.0">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="304.0" text="Confirme a senha:" textFill="WHITE" AnchorPane.leftAnchor="7.0">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

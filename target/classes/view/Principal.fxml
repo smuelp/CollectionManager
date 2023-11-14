@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincipalController">
+    <children>
+        <!-- Barra de Ferramentas -->
+        <ToolBar prefHeight="40.0" prefWidth="640.0" style="-fx-background-color: #1d1e26;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <Button fx:id="btnIncluir" mnemonicParsing="false" onAction="#btnIncluirOnAction" prefWidth="75.0" style="-fx-background-color: transparent; -fx-border-color: #EB9532;" text="Incluir" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+                <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#btnEditarOnAction" prefWidth="75.0" style="-fx-background-color: transparent; -fx-border-color: #7E3661;" text="Editar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+                <Button fx:id="btnExcluir" mnemonicParsing="false" onAction="#btnExcluirOnAction" prefWidth="75.0" style="-fx-background-color: transparent; -fx-border-color: #C82647;" text="Excluir" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+                <Label text="Filtro:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+                <TextField fx:id="txtFiltro" prefHeight="27.0" prefWidth="112.0" promptText="FILTRO" style="-fx-background-color: white; -fx-border-color: #242836;" />
+                <Button fx:id="btnFiltrar" mnemonicParsing="false" onAction="#btnFiltrarOnAction" prefWidth="75.0" style="-fx-background-color: transparent; -fx-border-color: #16A085;" text="Filtrar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+                <Button fx:id="btnLimpar" mnemonicParsing="false" onAction="#btnLimparOnAction" prefWidth="75.0" style="-fx-background-color: transparent; -fx-border-color: #8CC63F;" text="Limpar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+      
+                <!-- Barra de Menu -->
+                <MenuBar>
+                    <menus>
+                        <Menu text="Opções">
+                            <items>
+                                <MenuItem onAction="#verGrafico" text="Estatística" />
+                                <MenuItem onAction="#editarConta" text="Editar Conta" />
+                                <MenuItem onAction="#excluirConta" text="Excluir Conta" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+
+            </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+        </ToolBar>
+
+        <!-- Conteúdo da Tabela -->
+        <TableView fx:id="tblMiniatura" layoutY="51.0" prefHeight="402.0" prefWidth="640.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+            <columns>
+                <TableColumn fx:id="tblColLugar" prefWidth="112.0" style="-fx-background-color: #EAECED; -fx-border-color: white;" text="Lugar" />
+                <TableColumn fx:id="tblColEstado" prefWidth="125.0" style="-fx-background-color: #EAECED; -fx-border-color: white;" text="Estado" />
+                <TableColumn fx:id="tblColPais" prefWidth="107.0" style="-fx-background-color: #EAECED; -fx-border-color: white;" text="País" />
+                <TableColumn fx:id="tblColStatus" prefWidth="97.0" style="-fx-background-color: #EAECED; -fx-border-color: white;" text="Status" />
+                <TableColumn fx:id="tblColData" prefWidth="82.0" style="-fx-background-color: #EAECED; -fx-border-color: white;" text="Data" />
+                <TableColumn fx:id="tblColFoto" prefWidth="115.0" style="-fx-background-color: #EAECED; -fx-border-color: white;" text="Foto" />
+            </columns>
+        </TableView>
+      <TextField layoutX="128.0" layoutY="-35.0" />
+      <AnchorPane layoutY="440.0" prefHeight="40.0" prefWidth="640.0" style="-fx-background-color: #1d1e26;" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <Button fx:id="btnSair" layoutX="8.0" layoutY="7.0" mnemonicParsing="false" onAction="#OnActionSair" style="-fx-background-color: #E1332D; -fx-background-radius: 2px; -fx-border-color: transparent; -fx-border-radius: 2px;" text="SAIR" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="545.0" layoutY="9.0" prefHeight="17.0" prefWidth="81.0" textFill="#eb9532">
+               <font>
+                  <Font name="Verdana" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblOlaUsuario" alignment="CENTER" layoutX="233.0" layoutY="10.0" prefWidth="175.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

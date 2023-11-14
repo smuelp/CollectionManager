@@ -1,0 +1,10 @@
+/*
+ * Empty Stylesheet file.
+ */
+.mainFxmlClass {
+
+}
+.borda-colorida {
+    -fx-border-color: red;
+    -fx-border-width: 2; /* em pixels */
+}

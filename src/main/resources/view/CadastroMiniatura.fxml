@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="630.0" prefWidth="640.0" style="-fx-background-color: linear-gradient(to right, #373b52, #252736 51%, #1d1e26);" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroController">
+    <stylesheets>
+        <URL value="@/styles/cadastro.css" />
+    </stylesheets>
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="105.0" layoutY="66.0" text="CADASTRO DE MINIATURAS" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="30.0" />
+         </font></Label>
+      <Label layoutX="15.0" layoutY="191.0" text="Lugar:" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtLugar" layoutX="14.0" layoutY="210.0" prefHeight="25.0" prefWidth="280.0" style="-fx-font-family: sans-serif; -fx-background-color: #7881a1; -fx-border-style: none; -fx-border-color: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6); -fx-border-width: 0px 0px 1px 0px;" AnchorPane.topAnchor="210.0" />
+      <Label layoutX="14.0" layoutY="241.0" text="Estado:" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtEstado" layoutX="14.0" layoutY="260.0" prefHeight="25.0" prefWidth="280.0" style="-fx-font-family: sans-serif; -fx-background-color: #7881a1; -fx-border-style: none; -fx-border-color: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6); -fx-border-width: 0px 0px 1px 0px;" AnchorPane.topAnchor="260.0" />
+      <Label layoutX="14.0" layoutY="292.0" text="País:" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtPais" layoutX="14.0" layoutY="310.0" prefHeight="25.0" prefWidth="280.0" style="-fx-font-family: sans-serif; -fx-background-color: #7881a1; -fx-border-style: none; -fx-border-color: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6); -fx-border-width: 0px 0px 1px 0px;" AnchorPane.topAnchor="310.0" />
+      <Label layoutX="16.0" layoutY="368.0" text="Data:" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+      <Label layoutX="16.0" layoutY="433.0" text="Status:" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtStatus" layoutX="318.0" layoutY="296.0" visible="false" />
+      <Button fx:id="btnGravar" alignment="CENTER" contentDisplay="RIGHT" layoutX="260.0" layoutY="528.0" mnemonicParsing="false" onAction="#btnGravarOnAction" prefHeight="41.0" prefWidth="158.0" style="-fx-background-color: #275efe;" text="GRAVAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button fx:id="btnCancelar" alignment="TOP_CENTER" contentDisplay="RIGHT" layoutX="532.0" layoutY="591.0" mnemonicParsing="false" onAction="#btnCancelarOnAction" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #E1332D;" text="CANCELAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <DatePicker fx:id="dtData" layoutX="16.0" layoutY="382.0" promptText="Selecionar Data" />
+      <StackPane layoutX="419.0" layoutY="199.0" styleClass="borda-colorida">
+         <children>
+         <ImageView fx:id="imgFoto" fitHeight="168.0" fitWidth="189.0" onMouseClicked="#imgFotoOnMouseClicked" opacity="1.0" pickOnBounds="true" preserveRatio="true" styleClass="imageViewComBorda" />
+         </children></StackPane>
+      <ComboBox fx:id="comboStatus" layoutX="14.0" layoutY="450.0" prefHeight="25.0" prefWidth="280.0" promptText="Selecione uma opção" />
+      <Label layoutX="415.0" layoutY="386.0" text="Clique acima para adicionar uma foto" textFill="WHITE" />
+   </children>
+</AnchorPane>
