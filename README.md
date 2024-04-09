@@ -1,3 +1,5 @@
+(Criação do banco de dados, utilizando o Firebird + FlameRobin)
+
 CREATE TABLE usuario (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(200),
